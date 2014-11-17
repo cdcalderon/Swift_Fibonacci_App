@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FibonacciSeqApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-ZQ-on2">
+                                <rect key="frame" x="290" y="566" width="51" height="31"/>
+                                <connections>
+                                    <action selector="calculateFibonacciSequence" destination="BYZ-38-t0r" eventType="valueChanged" id="G6T-wh-q1D"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Includes Zero?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-pW-37q">
+                                <rect key="frame" x="168" y="571" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yE-zI-ROa">
+                                <rect key="frame" x="347" y="571" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number in the Fibonacci Sequence" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD8-42-SK1">
+                                <rect key="frame" x="69" y="611" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEA-Br-8BO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="94" translatesAutoresizingMaskIntoConstraints="NO" id="HUo-mo-z7Q">
+                                <rect key="frame" x="14" y="640" width="377" height="31"/>
+                                <connections>
+                                    <action selector="calculateFibonacciSequence" destination="BYZ-38-t0r" eventType="valueChanged" id="Fgd-zH-lC7"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LEA-Br-8BO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0M1-B0-3BE"/>
+                            <constraint firstItem="KD8-42-SK1" firstAttribute="trailing" secondItem="HXy-ZQ-on2" secondAttribute="trailing" id="5dB-r7-Uv3"/>
+                            <constraint firstItem="KD8-42-SK1" firstAttribute="centerX" secondItem="HUo-mo-z7Q" secondAttribute="centerX" id="63J-0Y-VzP"/>
+                            <constraint firstItem="KD8-42-SK1" firstAttribute="top" secondItem="9Xa-pW-37q" secondAttribute="bottom" constant="19" id="6g3-TY-ADA"/>
+                            <constraint firstItem="KD8-42-SK1" firstAttribute="top" secondItem="HXy-ZQ-on2" secondAttribute="bottom" constant="14" id="9N8-U9-iqM"/>
+                            <constraint firstItem="HUo-mo-z7Q" firstAttribute="top" secondItem="2yE-zI-ROa" secondAttribute="bottom" constant="56" id="9v5-dc-gu5"/>
+                            <constraint firstItem="9Xa-pW-37q" firstAttribute="firstBaseline" secondItem="2yE-zI-ROa" secondAttribute="firstBaseline" id="It7-Lg-4tm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HUo-mo-z7Q" secondAttribute="bottom" constant="58" id="LRt-Mn-Zef"/>
+                            <constraint firstAttribute="trailing" secondItem="LEA-Br-8BO" secondAttribute="trailing" id="S0M-DR-eFH"/>
+                            <constraint firstItem="2yE-zI-ROa" firstAttribute="centerY" secondItem="HXy-ZQ-on2" secondAttribute="centerY" id="Sw8-0t-zOU"/>
+                            <constraint firstItem="HXy-ZQ-on2" firstAttribute="leading" secondItem="9Xa-pW-37q" secondAttribute="trailing" constant="8" symbolic="YES" id="YZb-oL-TTd"/>
+                            <constraint firstItem="HUo-mo-z7Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cD3-6F-anW"/>
+                            <constraint firstItem="HUo-mo-z7Q" firstAttribute="top" secondItem="KD8-42-SK1" secondAttribute="bottom" constant="16" id="cuY-wb-swF"/>
+                            <constraint firstItem="2yE-zI-ROa" firstAttribute="leading" secondItem="HXy-ZQ-on2" secondAttribute="trailing" constant="8" symbolic="YES" id="hUo-qI-J3f"/>
+                            <constraint firstItem="9Xa-pW-37q" firstAttribute="baseline" secondItem="2yE-zI-ROa" secondAttribute="baseline" id="qSK-VQ-K68"/>
+                            <constraint firstItem="HXy-ZQ-on2" firstAttribute="top" secondItem="LEA-Br-8BO" secondAttribute="bottom" constant="16" id="rzi-3z-wR5"/>
+                            <constraint firstItem="LEA-Br-8BO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ufQ-s2-b3C"/>
+                            <constraint firstItem="KD8-42-SK1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="53" id="zzc-u6-cqh"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fibonacciTextView" destination="LEA-Br-8BO" id="xAf-FI-dQJ"/>
+                        <outlet property="includeZeroSwitch" destination="HXy-ZQ-on2" id="dfZ-Dp-rQT"/>
+                        <outlet property="includesZeroLabel" destination="2yE-zI-ROa" id="Enr-Ay-gI8"/>
+                        <outlet property="maxNumberSequenceSlider" destination="HUo-mo-z7Q" id="yWV-P1-3Bi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-159" y="40"/>
         </scene>
     </scenes>
 </document>

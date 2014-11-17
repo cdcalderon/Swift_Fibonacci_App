@@ -13,6 +13,7 @@
 		07F877311A195FBB00739EEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F877301A195FBB00739EEB /* Images.xcassets */; };
 		07F877341A195FBB00739EEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F877321A195FBB00739EEB /* LaunchScreen.xib */; };
 		07F877401A195FBB00739EEB /* FibonacciSeqAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8773F1A195FBB00739EEB /* FibonacciSeqAppTests.swift */; };
+		07F8774C1A196CEA00739EEB /* FibonacciSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8774B1A196CEA00739EEB /* FibonacciSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		07F877391A195FBB00739EEB /* FibonacciSeqAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FibonacciSeqAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8773E1A195FBB00739EEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F8773F1A195FBB00739EEB /* FibonacciSeqAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciSeqAppTests.swift; sourceTree = "<group>"; };
+		07F8774B1A196CEA00739EEB /* FibonacciSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				07F877301A195FBB00739EEB /* Images.xcassets */,
 				07F877321A195FBB00739EEB /* LaunchScreen.xib */,
 				07F877271A195FBB00739EEB /* Supporting Files */,
+				07F8774B1A196CEA00739EEB /* FibonacciSequence.swift */,
 			);
 			path = FibonacciSeqApp;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F8774C1A196CEA00739EEB /* FibonacciSequence.swift in Sources */,
 				07F8772C1A195FBB00739EEB /* ViewController.swift in Sources */,
 				07F8772A1A195FBB00739EEB /* AppDelegate.swift in Sources */,
 			);
